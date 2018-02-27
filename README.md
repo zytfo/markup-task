@@ -2,9 +2,7 @@
 
 Перед выполнением задания внимательно прочитайте:
 
-- [О всех этапах проверки задания](https://github.com/urfu-2017/guides/blob/master/workflow/overall.md)
 - [Как отправить пулл](https://github.com/urfu-2017/guides/blob/master/workflow/pull.md)
-- [Как пройти тесты](https://github.com/urfu-2017/guides/blob/master/workflow/test.md)
 - Правила оформления [JavaScript](https://github.com/urfu-2017/guides/blob/master/codestyle/js.md), [HTML](https://github.com/urfu-2017/guides/blob/master/codestyle/html.md) и [CSS](https://github.com/urfu-2017/guides/blob/master/codestyle/css.md) кода
 
 ## Основное задание
@@ -44,4 +42,3 @@ __Задание необходимо решить без использован
 <a href="https://img-fotki.yandex.ru/get/368754/398476706.0/0_1e3161_4cf2b947_orig" target="_blank">
 <img width="500" src="https://img-fotki.yandex.ru/get/368754/398476706.0/0_1e3161_4cf2b947_orig">
 </a>
-
