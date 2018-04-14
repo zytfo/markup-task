@@ -2,8 +2,258 @@
 <html lang="ru">
 <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="index.css">
     <title>Задача «Морда»</title>
 </head>
 <body>
+    <input type="checkbox" id="trend">
+    <input type="checkbox" id="anecdotes">
+    <input type="checkbox" id="tv">
+    <input type="checkbox" id="auto">
+    <input type="checkbox" id="weather">
+    <input type="checkbox" id="traffic">
+    <input type="checkbox" id="map">
+    <input type="checkbox" id="poster">
+    <input type="checkbox" id="showSettings">
+    <div class="settings">
+        <label for="trend">Посещаемые</label>
+        <label for="anecdotes">Лучшие анекдоты</label>
+        <label for="tv">Телепрограмма</label>
+        <label for="auto">Автомобильные новости</label>
+        <label for="weather">Погода</label>
+        <label for="traffic">Пробки</label>
+        <label for="map">Карта Екатеринбурга</label>
+        <label for="poster">Афиша</label>
+    </div>
+    <div class="layout">
+            <p class="location">
+                <a class="textLink"><span class="fa fa-location-arrow"></span>Екатеринбург</a>
+            </p>
+            <p class="settingsButton"><label for="showSettings" class="textLink">Настройка</label></p>
+            <section class="account">
+                <h2 class="username">login</h2>
+                <p class="mail">Почта <span class="newLetters">138</span></p>
+            </section>
+            <section class="news">
+                <input type="radio" name="news" id="news" checked>
+                <input type="radio" name="news">
+                <nav class="newsTabs">
+                    <label class="newsLabel link" for="news">Сейчас в СМИ</label>
+                    <label class="newsLabel link">в Екатеринбурге</label>
+                    <time datetime="2017-11-13 16:57">13 ноября, понедельник 16:57</time>
+                </nav>
+                <div class="news">
+                    <ul>
+                        <li><a href="#" class="textLink">В Кремле ответили на слова экс-главы ЦРУ о «запуганном» Путиным Трампе</a></li>
+                        <li><a href="#" class="textLink">Число жертв землетрясения в Иране и Ираке превысило 350 человек</a></li>
+                        <li><a href="#" class="textLink">Вероятной целью проникновения в РФ украинского дрона назвали шпионаж</a></li>
+                        <li><a href="#" class="textLink">Кремль рассказал о местонахождении не явившегося в суд Сечина</a></li>
+                        <li><a href="#" class="textLink">Кремль прокомментировал перенос послания Путина Федеральному собранию</a></li>
+                    </ul>
+                </div>
+                <div class="currencies">
+                    <div class="currency"><span class="curTitle">USD ЦБ</span> 59,18 <span class="curDiff">-0,10</span>
+                    </div>
+                    <div class="currency"><span class="curTitle">EUR ЦБ</span> 68,92 <span class="curDiff">-0,06</span>
+                    </div>
+                    <div class="currency"><span class="curTitle">НЕФТЬ</span> 63,44 <span class="curDiff">-0,27%</span>
+                    </div>
+                </div>
+            </section>
+            <figure class="disk">
+                <a href="#"><img src="advert.png" alt="adv.png" class="adv">
+                <h3>32 ГБ студентам</h3></a>
+                <figcaption>
+                    <p>Бесплатно и навсегда.</p>
+                </figcaption>
+            </figure>
+            <section class="logo">
+                <span class="logoText">Яндекс</span>
+            </section>
+            <section class="search">
+                <section class="topics">
+                    <p class="topic"><a href="#">Видео</a></p>
+                    <p class="topic"><a href="#">Картинки</a></p>
+                    <p class="topic"><a href="#">Новости</a></p>
+                    <p class="topic"><a href="#">Карты</a></p>
+                    <p class="topic"><a href="#">Маркет</a></p>
+                    <p class="topic"><a href="#">Переводчик</a></p>
+                    <p class="topic"><a href="#">Музыка</a></p>
+                    <p class="topic"><a href="#">ещё</a></p>
+                </section>
+                <form>
+                    <input type="text" class="searchBar">
+                    <button class="searchButton" value="Найти"><span class="buttonText">Найти</span></button>
+                </form>
+                <p class="searchAds">Найдётся всё. Например,
+                    <a class="queryExample">выхожу один я на дорогу</a></p>
+            </section>
+            <section class="banner"><img src="banner.png" alt="Алиса"></section>
+            <section class="widgets">
+                <section class="widgetColumn column1">
+                    <article class="widget trendWidget">
+                        <h3 class="widgetTitle"><a href="#">Посещаемое</a></h3>
+                        <section class="widgetContent">
+                            <p><span class="trends">Маркет</span> &mdash;
+                                <a href="#" class="textLink">китайская распродажа</a></p>
+                            <p><span class="trends">Авто.ру</span> &mdash;
+                                <a href="#" class="textLink">Туссан третьей серии</a></p>
+                            <p><span class="trends">Недвижимость</span> &mdash;
+                                <a href="#" class="textLink">продажа студии</a>
+                            </p>
+                            <p><span class="trends">Работа</span> &mdash;
+                                <a href="#" class="textLink">охранником</a>
+                            </p>
+                            <p><span class="trends">Здоровье</span> &mdash;
+                                <a href="#" class="textLink">врач на связи</a></p>
+                            <p><span class="trends">Коллекции</span> &mdash;
+                                <a href="#" class="textLink">как мелировать волосы</a></p>
+                            <p><span class="trends">Авиабилеты</span> &mdash;
+                                <a href="#" class="textLink">из Екатеринбурга</a></p>
+                        </section>
+                    </article>
+                    <article class="widget anecdotesWidget">
+                        <h3 class="widgetTitle"><a href="#">Анекдоты</a></h3>
+                        <section class="widgetContent">
+                            <input type="radio" name="anecdotes" id="anecdote1" checked>
+                            <input type="radio" name="anecdotes" id="anecdote2">
+                            <input type="radio" name="anecdotes" id="anecdote3">
+                            <input type="radio" name="anecdotes" id="anecdote4">
+                            <input type="radio" name="anecdotes" id="anecdote5">
+                            <article class="anecdote anecdote1Visible">
+                                <p class="anecdotePart">Раздел: <a href="#">Смехотура (нет)</a></p>
+                                <p class="anecdoteContent">- Вас лечить хорошо или бесплатно?</p>
+                            </article>
+                            <article class="anecdote anecdote2Visible">
+                                <p class="anecdotePart">Раздел: <a href="#">Смехотура (нет)</a></p>
+                                <p class="anecdoteContent">В магазине.
+                                        - А дай-ка мне, дочка, спички, соль, свечи, тушенку, крупу...
+                                        - Бабушка, вы что, к войне готовитесь?
+                                        - Напротив, дочка, к стабильности.</p>
+                            </article>
+                            <article class="anecdote anecdote3Visible">
+                                <p class="anecdotePart">Раздел: <a href="#">Смехотура (нет)</a></p>
+                                <p class="anecdoteContent">Всё, очевидно, что премия мира у Трампа в кармане.</p>
+                            </article>
+                            <article class="anecdote anecdote4Visible">
+                                <p class="anecdotePart">Раздел: <a href="#">Смехотура (нет)</a></p>
+                                <p class="anecdoteContent">- Будешь булочку, дорогая?
+                                        - Чуть позже, милый, спасибо. Мы же с тобой разговариваем. Я не могу есть и говорить одновременно.
+                                        - Я знаю. Будешь булочку?</p>
+                            </article>
+                            <article class="anecdote anecdote5Visible">
+                                <p class="anecdotePart">Раздел: <a href="#">Смехотура (нет)</a></p>
+                                <p class="anecdoteContent">Художники отличаются от фотографов тем, что у них птичка вылезает очень медленно…</p>
+                            </article>
+                            <label for="anecdote2" class="changeanecdote anecdote1Visible"><a>
+                                <span class="fa fa-repeat"></span> Показать ещё</a></label>
+                            <label for="anecdote3" class="changeanecdote anecdote2Visible"><a>
+                                <span class="fa fa-repeat"></span> Показать ещё</a></label>
+                            <label for="anecdote4" class="changeanecdote anecdote3Visible"><a>
+                                <span class="fa fa-repeat"></span> Показать ещё</a></label>
+                            <label for="anecdote5" class="changeanecdote anecdote4Visible"><a>
+                                <span class="fa fa-repeat"></span> Показать ещё</a></label>
+                            <label for="anecdote1" class="changeanecdote anecdote5Visible"><a>
+                                <span class="fa fa-repeat"></span> Показать ещё</a></label>
+                        </section>
+                    </article>
+                </section>
+                <section class="widgetColumn column2">
+                    <article class="widget tvWidget">
+                        <h3 class="widgetTitle"><a href="#">Телепрограмма</a></h3>
+                        <section class="widgetContent">
+                            <p class="program"><a class="textLink">16:00 Понять. Простить</a>
+                                <span class="channel">41 Домашний</span></p>
+                            <p class="program"><a class="textLink">16:30 Место встречи</a>
+                                <span class="channel">НТВ</span></p>
+                            <p class="program"><a class="textLink">16:30 Детективы</a>
+                                <span class="channel">Пятый канал</span></p>
+                            <p class="program"><a class="textLink">16:30 Новости</a>
+                                <span class="channel">РЕН ТВ</span></p>
+                            <p class="program"><a class="textLink">16:30 Гадалка</a>
+                                <span class="channel">ТВ-3</span></p>
+                            <p class="program"><a class="textLink">16:30 Реальные пацаны</a>
+                                <span class="channel">ТНТ</span></p>
+                        </section>
+                    </article>
+                    <article class="widget autoWidget">
+                        <h3 class="widgetTitle"><a href="#">Автомобильные новости</a></h3>
+                        <section class="widgetContent">
+                            <ul class="autoNewsList">
+                                <li class="autoNews">
+                                    <a href="#" class="textLink">Правительство поддержало законопроект о регистрации машиномест</a>
+                                    <time datetime="12:19" class="autoTime">12:19</time>
+                                </li>
+                                <li class="autoNews">
+                                    <a href="#" class="textLink">Обзор нового Mitsubishi, за которым выстроилась целая очередь</a>
+                                    <time datetime="12:01" class="autoTime">12:01</time>
+                                </li>
+                                <li class="autoNews">
+                                    <a href="#" class="textLink">«Лады» оснастят системой управления со смартфона</a>
+                                    <time datetime="11:40" class="autoTime">11:40</time>
+                                </li>
+                                <li class="autoNews">
+                                    <a href="#" class="textLink">В Китае представили спорткар с двигателем от Focus RS</a>
+                                    <time datetime="11:30" class="autoTime">11:30</time>
+                                </li>
+                                <li class="autoNews">
+                                    <a href="#" class="textLink">Священник отчитал прихожан, а они как дали ему по голове битой</a>
+                                    <time datetime="12:10" class="autoTime">12:10</time>
+                                </li>
+                                <li class="autoNews">
+                                    <a href="#" class="textLink">Роскосмос отправил Камаз в космос. Как тебе такое, Илон Маск?</a>
+                                    <time datetime="12:50" class="autoTime">12:50</time>
+                                </li>
+                            </ul>
+                        </section>
+                    </article>
+                </section>
+                <section class="widgetColumn column3">
+                    <article class="widget weatherWidget">
+                        <h3 class="widgetTitle"><a href="#">Погода</a>
+                            <a class="textLink">
+                                <img src="cloud.png"
+                                     alt="cloud" class="weatherIcon"> -3 &deg;C</a></h3>
+                        <section class="widgetContent">
+                            <a  class="textLink">Вечер −5,  ночь −7</a>
+                        </section>
+                    </article>
+                    <article class="widget trafficWidget">
+                        <h3 class="widgetTitle"><a href="#">Пробки</a> <a>
+                            <img src="traffic.png" alt="Пробки" class="trafficImg"> 4 балла</a></h3>
+                        <section class="widgetContent">
+                            <a class="textLink">Местами затруднения</a>
+                        </section>
+                    </article>
+                    <article class="widget mapWidget">
+                        <h3 class="widgetTitle"><a href="#">Карта Екатеринбурга</a></h3>
+                        <section class="widgetContent">
+                            <div>
+                                <a class="textLink mapPoint">Такси</a>
+                                <a class="textLink mapPoint">Расписания</a></div>
+                            <div>
+                                <a class="textLink mapPoint">Междугородные автобусы</a>
+                            </div>
+                        </section>
+                    </article>
+                    <article class="widget posterWidget">
+                        <h3 class="widgetTitle"><a href="#">Афиша</a></h3>
+                        <section class="widgetContent">
+                            <p class="posterItem"><a class="textLink">Субурбикон</a>
+                                <span class="posterDescr">премьера во чт</span></p>
+                            <p class="posterItem"><a class="textLink">Последний богатырь</a>
+                                <span class="posterDescr">приключения</span></p>
+                            <p class="posterItem"><a class="textLink">Фиксики: Большой секрет</a>
+                                <span class="posterDescr">мультфильм</span></p>
+                            <p class="posterItem"><a class="textLink">Тор: Рагнарёк</a>
+                                <span class="posterDescr">фэнтези</span></p>
+                            <p class="posterItem"><a class="textLink">Убийство Восточном...</a>
+                                <span class="posterDescr">драма</span></p>
+                            <p class="posterConcert">Концерты &mdash; <a class="textLink">Brainshtorm</a></p>
+                        </section>
+                    </article>
+                </section>
+            </section>
+    </div>
 </body>
 </html>
