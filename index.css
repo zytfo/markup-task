@@ -1,0 +1,481 @@
+body
+{
+    margin: 0;
+}
+
+.settings
+{
+    font: 12px Arial, sans-serif;
+    display: none;
+    position: absolute;
+    right: 15%;
+    top: 45px;
+    box-shadow: 0 0 2px #8d8d8d;
+    background: #fff;
+}
+
+.settings label
+{
+    display: block;
+    margin: 5px 20px 5px auto;
+}
+
+.settings label:before
+{
+    content: '';
+    display: inline-block;
+    background-image: url(checkbox.png);
+    background-size: 16px;
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.layout
+{
+    font: 14px/1.2 Arial, sans-serif;
+    padding: 10px;
+    display: grid;
+
+    grid-template-columns: 15% 1fr 1fr 1fr 15%;
+    grid-template-rows: auto;
+    grid-template-areas: 'city settings settings settings account'
+        'left news news smallAds right'
+        'logo search search search right'
+        'left2 ads ads ads right'
+        'left2 widgets widgets widgets right';
+}
+
+.location
+{
+    grid-area: city;
+    color: #b4b4b4;
+    font-size: 14px;
+    padding-left: 10px;
+}
+
+.news
+{
+    grid-area: news;
+}
+
+.news ul
+{
+    padding-left: 0;
+}
+
+.newsLabel,
+.currency:first-of-type
+{
+    margin-left: 0;
+}
+
+.newsTabs,
+.currencies,
+.topics
+{
+    display: flex;
+}
+
+.news li
+{
+    margin-bottom: 10px;
+}
+
+.news li a
+{
+    color: #000;
+}
+
+
+.disk
+{
+    grid-area: smallAds;
+    margin: 0 auto 20px;
+    width: 200pt;
+}
+
+a,
+.link,
+.textLink
+{
+    color: #0054b9;
+    text-decoration: none;
+    transition: .15s color ease-out;
+    cursor: pointer;
+}
+
+.logo
+{
+    grid-area: logo;
+    text-align: right;
+    position: relative;
+    top: 21px;
+    font-size: 3.5em;
+    font-stretch: condensed;
+    padding-right: 20px;
+}
+
+a:hover,
+.link:hover,
+.textLink:hover
+{
+    color: #c00;
+}
+
+.textLink
+{
+    color: inherit;
+}
+
+input[id='trend']:checked ~ .settings label[for='trend']:before,
+input[id='anecdotes']:checked ~ .settings label[for='anecdotes']:before,
+input[id='tv']:checked ~ .settings label[for='tv']:before,
+input[id='auto']:checked ~ .settings label[for='auto']:before,
+input[id='weather']:checked ~ .settings label[for='weather']:before,
+input[id='traffic']:checked ~ .settings label[for='traffic']:before,
+input[id='map']:checked ~ .settings label[for='map']:before,
+input[id='poster']:checked ~ .settings label[for='poster']:before
+{
+    background-image: url(empty.png);
+}
+
+input[id='trend']:checked ~ .layout .trendWidget,
+input[id='anecdotes']:checked ~ .layout .anecdotesWidget,
+input[id='tv']:checked ~ .layout .tvWidget,
+input[id='auto']:checked ~ .layout .autoWidget,
+input[id='weather']:checked ~ .layout .weatherWidget,
+input[id='traffic']:checked ~ .layout .trafficWidget,
+input[id='map']:checked ~ .layout .mapWidget,
+input[id='poster']:checked ~ .layout .posterWidget,
+input[id='trend']:checked ~ input[id='anecdotes']:checked ~ .layout .column1,
+input[id='tv']:checked ~ input[id='auto']:checked ~ .layout .column2
+{
+    display: none;
+}
+
+.settingsButton
+{
+    grid-area: settings;
+    text-align: right;
+    padding: 0 30px;
+}
+
+input[id='showSettings']:checked ~ .settings
+{
+    display: block;
+}
+
+.account
+{
+    grid-area: account;
+    box-shadow: 0 0 5px #e5e5e5;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.username
+{
+    margin-top: 0;
+    font-size: 14px;
+}
+
+.username:first-letter,
+.logo::first-letter
+{
+    color: #f00;
+}
+
+.mail
+{
+    margin-bottom: 5px;
+}
+
+.newLetters
+{
+    font-weight: bold;
+}
+
+nav label.link
+{
+    font-size: 1.4em;
+    color: rgba(0, 84, 185, .75);
+}
+
+input[id='news']:checked ~ nav .newsLabel
+{
+    color: #0054b9;
+}
+
+nav label,
+nav time
+{
+    margin: 0 10px;
+}
+
+.anecdote,
+input[name='anecdotes'],
+.changeanecdote
+{
+    display: none;
+}
+
+.anecdote
+{
+    height: 230px;
+}
+
+input[id='anecdote1']:checked ~ .anecdote1Visible,
+input[id='anecdote2']:checked ~ .anecdote2Visible,
+input[id='anecdote3']:checked ~ .anecdote3Visible,
+input[id='anecdote4']:checked ~ .anecdote4Visible,
+input[id='anecdote5']:checked ~ .anecdote5Visible
+{
+    display: block;
+}
+
+time
+{
+    color: #b4b4b4;
+    font: .7em Verdana, Arial, sans-serif;
+    align-self: center;
+}
+
+.news input,
+body > input
+{
+    display: none;
+}
+
+.currency
+{
+    margin: 0 10px;
+}
+
+.curTitle
+{
+    font-weight: bold;
+}
+
+.curDiff,
+.queryExample,
+.channel,
+.autoTime,
+.posterDescr
+{
+    color: #b4b4b4;
+}
+
+.adv
+{
+    display: block;
+    width: 40%;
+    margin: auto;
+}
+
+.search
+{
+    grid-area: search;
+}
+
+.topics
+{
+    margin-bottom: 10px;
+}
+
+.topic:first-of-type
+{
+    margin-left: 0;
+}
+
+.topic
+{
+    margin: 5px 10px;
+}
+
+.search form
+{
+    width: 100%;
+}
+
+.searchBar
+{
+    width: 80%;
+    height: 30px;
+    border: 2px solid #fedc4d;
+    padding-left: 10px;
+}
+
+.searchBar:focus
+{
+    outline: none;
+}
+
+.searchAds
+{
+    font-size: .9em;
+}
+
+.searchButton
+{
+    position: relative;
+    padding: 2px 10px;
+    background: #fedc4d;
+    border: none;
+    width: 70px;
+    height: 36px;
+    margin-left: -5px;
+    vertical-align: top;
+}
+
+.searchAds
+{
+    margin: 5px 0;
+}
+
+.banner
+{
+    grid-area: ads;
+    margin: 10px 0;
+}
+
+.widgets
+{
+    grid-area: widgets;
+}
+
+.widgets
+{
+    display: flex;
+    align-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.widget
+{
+    margin-bottom: 20px;
+    padding-right: 10px;
+}
+
+.widgetColumn
+{
+    width: 33%;
+}
+
+.widgetTitle
+{
+    font-size: 1.2em;
+    font-weight: normal;
+    margin-top: 0;
+}
+
+.trends
+{
+    font-weight: bold;
+}
+
+.channel
+{
+    margin-left: 10px;
+}
+
+.autoWidget .widgetContent
+{
+    max-height: 300px;
+    position: relative;
+}
+
+.autoNewsList
+{
+    padding: 30px 0;
+    overflow-y: scroll;
+    height: 220px;
+}
+
+.autoNewsList:before,
+.autoNewsList:after
+{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 50px;
+
+}
+
+.autoNewsList:before
+{
+    top: 0;
+    background: linear-gradient(to bottom, #fff, rgba(0, 0, 0, 0));
+}
+
+.autoNewsList:after
+{
+    bottom: 0;
+    background: linear-gradient(to top, #fff, rgba(0, 0, 0, 0));
+}
+
+.autoNewsList li
+{
+    list-style: none;
+    margin: 10px auto;
+}
+
+.autoWidget p
+{
+    margin-top: 0;
+}
+
+.autoNewsList::-webkit-scrollbar
+{
+    display: none;
+}
+
+.weatherIcon,
+.trafficImg
+{
+    width: 32px;
+    vertical-align: middle;
+}
+
+.mapPoint,
+.posterConcert
+{
+    font-weight: bold;
+}
+
+.mapPoint:not(:first-child)
+{
+    margin: 0;
+}
+
+.mapWidget .widgetContent div
+{
+    margin-top: 10px;
+}
+
+.posterDescr
+{
+    margin-left: 10px;
+}
+
+.searchButton:after
+{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-color: rgba(255, 219, 76, 0);
+    border-left-color: #fedc4d;
+    top: -4px;
+    right: -9px;
+    border-width: 22px 0 22px 11px;
+
+}
+
+.buttonText
+{
+    margin-right: 9px;
+    font-size: 17px;
+}
